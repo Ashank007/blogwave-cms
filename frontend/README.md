@@ -52,7 +52,7 @@ This is a full-stack blog platform built with **Next.js**, **Chakra UI**, and **
 
 ### ENV
 
-NEXT_PUBLIC_API_URL=https://blogwave-server.onrender.com
-NEXT_PUBLIC_UPLOAD_PRESET=ueygkfkf
-NEXT_PUBLIC_CLOUDINARY_URL=https://api.cloudinary.com/v1_1/dxwjrvlon/image/upload
-JWT_SECRET=AlooPuriKhao
+NEXT_PUBLIC_API_URL=  
+NEXT_PUBLIC_UPLOAD_PRESET=  
+NEXT_PUBLIC_CLOUDINARY_URL=  
+JWT_SECRET=  

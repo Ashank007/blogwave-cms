@@ -53,9 +53,9 @@ This is a full-stack blog platform built with **Next.js**, **Chakra UI**, and **
 ### ENV 
 
 PORT=4040
-FRONTEND_URL = http://localhost:3000
-MONGODB_URI = mongodb://localhost:27017/
-JWT_SECRET = AlooPuriKhao
-USEREMAIL = blogwavedev@gmail.com
-PASSWORD = lylf sahe doxd jpgu
+FRONTEND_URL =  
+MONGODB_URI =  
+JWT_SECRET =  
+USEREMAIL =  
+PASSWORD =  
 
