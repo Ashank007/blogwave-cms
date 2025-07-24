@@ -52,7 +52,7 @@ This is a full-stack blog platform built with **Next.js**, **Chakra UI**, and **
 
 ### ENV 
 
-PORT=4040
+PORT=  
 FRONTEND_URL =  
 MONGODB_URI =  
 JWT_SECRET =  
