@@ -179,7 +179,7 @@ const Header = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-4">
             {/* Login Button - Subtle luminescence */}
-            <TransitionLink href='/register' label='' open={false}>
+            <TransitionLink href='/login' label='' open={false}>
             <motion.span
               className="px-5 py-2.5 font-medium rounded-lg border transition-all duration-300 relative overflow-hidden focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[#0D1B2A] focus:ring-[${palette.focusAqua}]" // Added focus ring
               style={{
@@ -279,7 +279,7 @@ const Header = () => {
               animate="visible"
               exit="exit"
             >
-              <TransitionLink href='/register' label='' open={false}>
+              <TransitionLink href='/login' label='' open={false}>
               <motion.span
                 className="w-full text-left px-4 py-2.5 font-medium rounded-lg border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[#0D1B2A] focus:ring-[${palette.focusAqua}]" // Added focus ring
                 style={{
