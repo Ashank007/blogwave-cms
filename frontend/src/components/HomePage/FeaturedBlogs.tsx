@@ -3,23 +3,17 @@ import Image from 'next/image';
 import BlogCard from './util/BlogCard';
 
 // Import fonts from next/font/google
-import { IBM_Plex_Sans_Thai, DM_Sans, Gloock } from 'next/font/google';
+//import { DM_Sans, Gloock } from 'next/font/google';
+import localFont from 'next/font/local';
 
 // Configure IBM Plex Sans Thai for headings
-const ibmPlexSansThai = Gloock({
-  subsets: ['latin'],
-  weight: '400', // Bold weights for headings
-  variable: '--font-ibm-plex-sans-thai',
-  display: 'swap',
+const ibmPlexSansThai = localFont({
+  src: '../../app/fonts/Gloock-Regular.ttf',
+  weight: '400',   // optional
+  //subsets:['latin']
 });
 
-// Configure DM Sans for body text, card titles, and meta
-const dmSans = DM_Sans({
-  subsets: ['latin'],
-  weight: ['400', '500', '700'], // Normal, medium, bold for various uses
-  variable: '--font-dm-sans',
-  display: 'swap',
-});
+
 
 // Re-defining palette for clarity, ensuring consistency
 const palette = {
@@ -93,7 +87,7 @@ const blogPosts = [
 const FeaturedBlogs: React.FC = () => {
   return (
     <section 
-      className={`relative z-10 py-24 px-6 ${ibmPlexSansThai.variable} ${dmSans.variable}`}
+      className={`relative z-10 py-24 px-6 ${ibmPlexSansThai.className}`}
       style={{
         // Use custom palette colors for top to middle ocean transition
         background: `linear-gradient(to bottom, ${palette.topOceanStart} 0%, ${palette.midOceanEnd} 100%)`,

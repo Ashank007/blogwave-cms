@@ -6,21 +6,14 @@ import FloatingParticles from './FloatingParticles';
 import { OrbitControls } from '@react-three/drei';
 
 // Import fonts from next/font/google
-import { IBM_Plex_Sans_Thai, DM_Sans, Bebas_Neue, Fascinate_Inline } from 'next/font/google'; // Corrected import for IBM Plex Sans Thai
+//import { Fascinate_Inline } from 'next/font/google'; // Corrected import for IBM Plex Sans Thai
+import localFont from 'next/font/local';
 
 // Configure IBM Plex Sans Thai for headings
-const ibmPlexSansThai = Fascinate_Inline({
-  subsets: ['latin'],
-  weight:"400", // Include weights you plan to use
+const ibmPlexSansThai = localFont({
+  src: '../../app/fonts/FascinateInline-Regular.ttf',
+  weight: '400',
   variable: '--font-ibm-plex-sans-thai',
-  display: 'swap',
-});
-
-// Configure DM Sans for body text
-const dmSans = DM_Sans({
-  subsets: ['latin'],
-  weight: ['400', '600', '700'], // Include weights you plan to use
-  variable: '--font-dm-sans',
   display: 'swap',
 });
 
@@ -38,7 +31,7 @@ const Hero: React.FC = () => {
 
   return (
     // Apply font variables globally to the section
-    <section className={`relative z-10 min-h-screen flex items-center justify-center px-6 ${ibmPlexSansThai.variable} ${dmSans.variable}`}>
+    <section className={`relative z-10 min-h-screen flex items-center justify-center px-6 ${ibmPlexSansThai.variable}`}>
       <div className="max-w-4xl mx-auto text-center">
         <div 
           className="transform transition-all duration-1000"
@@ -57,7 +50,7 @@ const Hero: React.FC = () => {
           <p
             className="text-xl md:text-2xl mb-8 text-cyan-100/80 max-w-2xl mx-auto leading-relaxed"
             // Use the font variable for DM Sans
-            style={{ fontFamily: 'var(--font-dm-sans)' }}
+            //style={{ fontFamily: 'var(--font-dm-sans)' }}
           >
             Where stories flow like ocean currents, connecting minds across the digital depths
           </p>
@@ -65,9 +58,9 @@ const Hero: React.FC = () => {
             {/* Start Writing Button with enhanced hover for glow effect */}
             <button
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-lg font-semibold transition-all transform hover:scale-105 shadow-lg
-                         // Add a subtle border for extra definition and glow
+                        
                          border border-transparent
-                         // Define custom class for hover effect on buttons
+                         
                          hover:button-glow-primary" 
               style={{ fontFamily: 'var(--font-dm-sans)' }}
             >

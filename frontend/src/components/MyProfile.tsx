@@ -6,8 +6,12 @@ import MyBlogCard from "./MyBlogCard";
 import CustomEdit from "./CustomEdit";
 import { addContact, addDesc, addJob, addlocation } from "@/libs/user";
 import { Dispatch, SetStateAction } from "react";
-import { DynaPuff } from "next/font/google";
-const dyna = DynaPuff({subsets:['latin'], weight:"700"})
+//import { DynaPuff } from "next/font/google";
+import localFont from "next/font/local";
+const dyna = localFont({
+  src: '../app/fonts/DynaPuff-VariableFont_wdth,wght.ttf',
+  weight: '700',
+});
 type ProfileProps = {
   profilePic: string;
   name: string;

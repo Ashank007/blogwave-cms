@@ -1,11 +1,13 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { JetBrains_Mono,  Space_Grotesk, Gloock } from 'next/font/google';
+//import {  Gloock } from 'next/font/google';
+import localFont from 'next/font/local';
+const jet =  localFont({
+  src: '../../app/fonts/Gloock-Regular.ttf',
+  weight: '400',   // optional
+  //subsets:['latin']
+});
 
-const jet = Gloock({
-  weight: '400',
-  subsets: ['latin']
-})
 const OceanBedSection: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({

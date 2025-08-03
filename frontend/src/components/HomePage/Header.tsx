@@ -1,9 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Outfit, Inter } from 'next/font/google';
+//import { Outfit, Inter } from 'next/font/google';
 import TransitionLink from '../TransistionLink';
-const outfit = Outfit({ subsets: ['latin'], variable: '--font-outfit' });
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+import localFont from 'next/font/local';
+const inter = localFont({
+  src: '../../app/fonts/inter.ttf',
+  weight: '400',
+  variable: '--font-inter' 
+});
+const outfit = localFont({
+  src: '../../app/fonts/Outfit-VariableFont_wght.ttf',
+  weight: '400',
+  variable: '--font-outfit' 
+});
+//Inter({ subsets: ['latin'], variable: '--font-inter' });
 // --- Artist's Color Palette: "Moonlit Depths" ---
 const palette = {
   // Deep ocean foundation

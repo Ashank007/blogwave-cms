@@ -1,8 +1,12 @@
 import { Box, Divider, Heading, Wrap } from '@chakra-ui/react'
-import { DynaPuff } from 'next/font/google'
+//import { DynaPuff } from 'next/font/google'
 import React from 'react'
 import MyBlogCard from './MyBlogCard'
-const dyna = DynaPuff({subsets:['latin'], weight:"700"})
+import localFont from 'next/font/local';
+const dyna = localFont({
+  src: '../app/fonts/DynaPuff-VariableFont_wdth,wght.ttf',
+  weight: '700',
+});
 type UserBlogs={
     blogs:any
 }

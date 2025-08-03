@@ -3,8 +3,11 @@ import { SearchIcon, SmallAddIcon, } from '@chakra-ui/icons'
 import { Box,Button,Divider,Flex,Heading, IconButton, Image as Img, List, ListIcon, ListItem, useDisclosure, } from '@chakra-ui/react'
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
-import { Lilita_One } from 'next/font/google'
-const lilta = Lilita_One({subsets:['latin'], weight:'400'})
+//import { Lilita_One } from 'next/font/google'
+const lilta = localFont({
+  src: '../app/fonts/LilitaOne-Regular.ttf',
+  weight: '400',
+});
 import {
     Drawer,
     DrawerBody,
@@ -19,6 +22,7 @@ import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 import { useRouter } from 'next/navigation'
 import TransitionLink from './TransistionLink'
+import localFont from 'next/font/local'
 const CustomIcon:React.FC<{image:string}>=({image})=>{
  
     return (
