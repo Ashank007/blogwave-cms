@@ -72,6 +72,7 @@ export const BlogNav:React.FC<BlogNavProps> = ({id,views,likes,comments,userlike
   }
   const handleComment = async ()=>{
     const response = await commentBlog(id, comment);
+    setcomment("");
     refresh(prev=>!prev);
   }
   const latestComments = comments.slice().reverse();

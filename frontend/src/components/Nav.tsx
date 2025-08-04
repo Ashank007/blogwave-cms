@@ -115,7 +115,7 @@ const Nav: React.FC = () => {
       />
   </Box>
   <Box className="text-2xl">{user?.username}</Box>
-  <Box className="text-md text-[#191919]">No description</Box>
+  <Box className="text-md text-[#191919]">{user?.description}</Box>
 
 </Box>
 <Flex justifyContent={'center'} alignItems={'center'}>

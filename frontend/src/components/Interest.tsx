@@ -3,6 +3,7 @@ import { Box, Button, VStack, Text, Heading, Wrap, WrapItem } from '@chakra-ui/r
 import { profilesubmit } from '@/libs/auth';
 import bloginterests from '@/utils/blogtags';
 import { ToastContainer,toast } from 'react-toastify';
+import { useRouter } from 'next/navigation';
 const interests = bloginterests
 type InterestProps={
   name: string
@@ -11,7 +12,7 @@ type InterestProps={
 }
 const InterestsSelector: React.FC<InterestProps> = ({name,image,email}) => {
   const [selectedInterests, setSelectedInterests] = useState<string[]>([]);
-
+  const router = useRouter();
   const handleInterestClick = (interest: string) => {
     setSelectedInterests(prev =>
       prev.includes(interest)
@@ -23,6 +24,7 @@ const InterestsSelector: React.FC<InterestProps> = ({name,image,email}) => {
       const response = await profilesubmit(name,image,selectedInterests,email);
       if(response.success){
         toast.success("Profile submitted successfully!");
+        router.push('/login');
       }else{
         toast.error(response.message);
       }
