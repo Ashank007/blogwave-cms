@@ -7,7 +7,7 @@ interface ShareButtonProps {
 }
 
 const ShareButton: React.FC<ShareButtonProps> = ({ id }) => {
-  const { hasCopied, onCopy } = useClipboard(`https://blog-wave-snowy.vercel.app//blog/${id}`);
+  const { hasCopied, onCopy } = useClipboard(`${process.env.NEXT_PUBLIC_WEB_URL??"http://localhost:3000"}/blog/${id}`);
   const [tooltipLabel, setTooltipLabel] = useState('Copy link');
 
   const handleClick = () => {

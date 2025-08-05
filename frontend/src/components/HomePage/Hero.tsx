@@ -8,6 +8,7 @@ import { OrbitControls } from '@react-three/drei';
 // Import fonts from next/font/google
 //import { Fascinate_Inline } from 'next/font/google'; // Corrected import for IBM Plex Sans Thai
 import localFont from 'next/font/local';
+import { useRouter } from 'next/navigation';
 
 // Configure IBM Plex Sans Thai for headings
 const ibmPlexSansThai = localFont({
@@ -18,6 +19,11 @@ const ibmPlexSansThai = localFont({
 });
 
 const Hero: React.FC = () => {
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push('/home'); // replace with your target route
+  };
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
@@ -57,6 +63,7 @@ const Hero: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             {/* Start Writing Button with enhanced hover for glow effect */}
             <button
+            onClick={handleClick}
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-lg font-semibold transition-all transform hover:scale-105 shadow-lg
                         
                          border border-transparent
@@ -68,6 +75,7 @@ const Hero: React.FC = () => {
             </button>
             {/* Explore Stories Button with enhanced hover for glowing border */}
             <button
+            onClick={handleClick}
               className="px-8 py-4 rounded-full text-lg font-semibold transition-all 
                          // Use a custom class for the gradient border and hover glow
                          button-border-gradient hover:button-glow-secondary" 

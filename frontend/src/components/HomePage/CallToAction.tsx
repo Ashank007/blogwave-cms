@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 //import {  Gloock } from 'next/font/google';
 import localFont from 'next/font/local';
+import { useRouter } from 'next/navigation';
 const jet =  localFont({
   src: '../../app/fonts/Gloock-Regular.ttf',
   weight: '400',   // optional
@@ -9,6 +10,11 @@ const jet =  localFont({
 });
 
 const OceanBedSection: React.FC = () => {
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push('/home'); // replace with your target route
+  };
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -82,6 +88,7 @@ const OceanBedSection: React.FC = () => {
           </p>
           
           <motion.button 
+          onClick={handleClick}
             className="relative px-12 py-5 rounded-full text-xl font-semibold transition-all duration-500 overflow-hidden group"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -134,11 +141,11 @@ const OceanBedSection: React.FC = () => {
               </span>
             </div>
             <div className="flex space-x-6">
-              <a href="#" className="text-cyan-300 hover:text-white transition-colors">GitHub</a>
+              <a href="https://github.com/SrabanMondal/BlogWave-CMS" className="text-cyan-300 hover:text-white transition-colors">GitHub</a>
             </div>
           </div>
           <div className="mt-8 pt-8 border-t border-cyan-500/20 text-center text-cyan-300/60">
-            <p>© 2024 BlogWave. Made with 🌊 by Arch</p>
+            <p>© 2024 BlogWave. Made with 🌊 by Sraban and Ashank</p>
           </div>
         </div>
       </motion.footer>
