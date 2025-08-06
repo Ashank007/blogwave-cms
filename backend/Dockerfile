@@ -2,10 +2,13 @@ FROM node:20-alpine
 
 WORKDIR /app
 
+RUN apk add --no-cache netcat-openbsd
+
 COPY . .
 
 RUN npm i
 
-CMD ["npm","run","dev"]
-
 EXPOSE 3001
+
+CMD ["npm","start"]
+
