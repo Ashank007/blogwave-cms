@@ -1,9 +1,9 @@
-# 🌊 BlogWave CMS
+# BlogWave CMS
 
 **BlogWave CMS** is a full-stack underwater-themed blog content management system. It features a visually immersive frontend with oceanic animations, a robust backend with JWT authentication, and complete blog management functionality.
 
 
-## 🧰 **Tech Stack**
+## **Tech Stack**
 
 - **Frontend:** Next.js 13+ (App Router) + TypeScript + Tailwind CSS  
 - **Backend:** Node.js + Express + MongoDB + JWT Auth  
@@ -11,7 +11,7 @@
 - **DevOps:** Docker + Docker Compose  
 
 
-## ✨ **Key Features**
+## **Key Features**
 
 ### Frontend
 - User authentication: Register, Login, OTP verification, Password reset  
@@ -33,7 +33,7 @@
 - `docker-compose.yaml` to run both frontend and backend seamlessly  
 - Easy local setup with one command  
 
-## 🚀 **Installation**
+## **Installation**
 
 ### Prerequisites
 - Node.js (v18+ recommended)  
@@ -68,7 +68,7 @@ docker-compose up --build
 - Frontend: http://localhost:3000
 - Backend: http://localhost:5000
 
-## 📂 Folder Structure
+## Folder Structure
 ```
 blogwave-cms/
 ├── backend/    # Node.js API, controllers, models, routes
@@ -76,7 +76,7 @@ blogwave-cms/
 ├── docker-compose.yaml
 ```
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repo
 
@@ -88,6 +88,6 @@ blogwave-cms/
 
 5. Open a Pull Request
 
-## 📄 License
+## License
 
 This project is licensed under GNU License.
